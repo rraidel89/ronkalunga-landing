@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Ronkalunga en vivo · The Fillmore Miami Beach · 21 de agosto 2026</title>
+<meta name="description" content="Ronkalunga en concierto en The Fillmore Miami Beach (Jackie Gleason Theater) el 21 de agosto de 2026. Una noche de música latina en Miami Beach. Compra tus entradas." />
+
+<!-- ============================================================= -->
+<!-- VERIFICACIÓN DE DOMINIO EN META (Business Settings → Domains) -->
+<meta name="facebook-domain-verification" content="REEMPLAZA_CON_TU_CODIGO_DE_VERIFICACION" />
+<!-- ============================================================= -->
+
+<!-- Open Graph -->
+<meta property="og:title" content="Ronkalunga en vivo · The Fillmore Miami Beach" />
+<meta property="og:description" content="21 de agosto de 2026 · Miami Beach. Música latina en vivo. Compra tus entradas." />
+<meta property="og:type" content="event" />
+<meta property="og:locale" content="es_LA" />
+<meta property="og:image" content="https://entradas.ronkalunga.com/poster.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<style>
+  :root{
+    /* Paleta comprometida — grunge tropical cubano (OKLCH-tinted warm dark) */
+    --night:#0C0A07;      /* negro cálido, tintado (nunca negro puro) */
+    --soot:#15110B;       /* superficie */
+    --soot-2:#1E1810;     /* superficie elevada */
+    --cream:#F3E9D2;      /* texto principal, crema */
+    --tan:#C7B48A;        /* texto secundario cálido */
+    --gold:#E3A72C;       /* acento dorado (fecha) */
+    --gold-deep:#B9791A;
+    --rojo:#D8261E;       /* rojo lengua (CTA/urgencia) */
+    --rojo-hot:#F0392B;
+    --line:rgba(243,233,210,.16);
+    --line-strong:rgba(243,233,210,.32);
+
+    --font-display:'Anton',Impact,'Arial Narrow Bold',sans-serif;
+    --font-cond:'Barlow Condensed','Arial Narrow',sans-serif;
+    --font-body:'Barlow',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+
+    /* Reemplaza por el póster: --poster:url('poster.jpg'); */
+    --poster:none;
+
+    /* z-index semántico */
+    --z-sticky:40; --z-nav:50;
+
+    --shell:min(1180px,92vw);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{
+    font-family:var(--font-body);
+    background:var(--night);
+    color:var(--cream);
+    line-height:1.5;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+    position:relative;
+  }
+  /* Grano/textura grunge global */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    mix-blend-mode:overlay;
+  }
+  .shell{width:var(--shell);margin-inline:auto}
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
+  ::selection{background:var(--rojo);color:#fff}
+  :focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+
+  /* Etiqueta / kicker (uso deliberado, no repetido en cada sección) */
+  .kicker{
+    font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+    letter-spacing:.28em;font-size:clamp(11px,3vw,13px);color:var(--gold);
+    display:inline-flex;align-items:center;gap:10px;
+  }
+  .kicker::before{content:"";width:26px;height:2px;background:var(--gold)}
+
+  /* ---------------- CTA ---------------- */
+  .cta{
+    --_bg:var(--rojo);
+    display:inline-flex;align-items:center;justify-content:center;gap:12px;
+    font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+    letter-spacing:.06em;font-size:clamp(17px,4.6vw,20px);
+    color:#FFF7EC;background:var(--_bg);
+    padding:18px 30px;border:none;border-radius:0;cursor:pointer;
+    min-height:56px;position:relative;isolation:isolate;
+    box-shadow:6px 6px 0 0 rgba(0,0,0,.55);
+    transition:transform .18s cubic-bezier(.22,1,.36,1),
+               box-shadow .18s cubic-bezier(.22,1,.36,1),
+               background-color .18s ease;
+  }
+  .cta:hover{--_bg:var(--rojo-hot);transform:translate(-2px,-2px);box-shadow:8px 8px 0 0 rgba(0,0,0,.6)}
+  .cta:active{transform:translate(2px,2px);box-shadow:2px 2px 0 0 rgba(0,0,0,.5)}
+  .cta svg{width:20px;height:20px;flex:none}
+  .cta--gold{--_bg:var(--gold);color:#1A1206}
+  .cta--gold:hover{--_bg:#F2B841}
+  .cta--block{width:100%}
+  .cta-note{display:block;margin-top:12px;font-family:var(--font-cond);
+    font-weight:500;letter-spacing:.05em;text-transform:uppercase;
+    font-size:13px;color:var(--tan)}
+
+  /* ---------------- HERO ---------------- */
+  .hero{position:relative;z-index:2;padding:26px 0 40px;overflow:hidden}
+  .hero__glow{
+    position:absolute;inset:0;z-index:-1;pointer-events:none;
+    background:
+      radial-gradient(70% 55% at 12% 0%, rgba(227,167,44,.16), transparent 60%),
+      radial-gradient(60% 50% at 100% 40%, rgba(216,38,30,.14), transparent 62%),
+      linear-gradient(180deg,#0E0B07 0%,var(--night) 70%);
+  }
+  .topbar{display:flex;align-items:center;justify-content:space-between;
+    padding-block:6px 30px;gap:16px}
+  .brandmark{font-family:var(--font-cond);font-weight:700;letter-spacing:.24em;
+    text-transform:uppercase;font-size:14px;color:var(--cream)}
+  .topbar .presenter{font-family:var(--font-cond);font-weight:600;
+    letter-spacing:.18em;text-transform:uppercase;font-size:11px;color:var(--tan)}
+
+  .hero__grid{display:grid;gap:clamp(24px,5vw,52px);align-items:center}
+  /* El póster (key art) va primero: arriba en móvil, a la izquierda en desktop */
+  .poster{order:-1}
+
+  /* Copy principal del hero (gancho, sin duplicar el póster) */
+  .hero__lead{font-family:var(--font-cond);font-weight:600;
+    text-transform:uppercase;letter-spacing:.02em;line-height:1.14;
+    font-size:clamp(22px,6vw,34px);color:var(--cream);max-width:20ch;text-wrap:balance}
+  .hero__lead b{color:var(--gold);font-weight:700}
+
+  .hero__actions{margin-top:clamp(26px,5vw,34px)}
+
+  /* Póster (key art) */
+  .poster{position:relative;justify-self:center;width:100%;max-width:440px}
+  .poster__frame{
+    position:relative;aspect-ratio:3/4;overflow:hidden;
+    border:1px solid var(--line-strong);
+    background:var(--poster) center/cover no-repeat, var(--soot);
+    box-shadow:14px 16px 0 -3px rgba(0,0,0,.5);
+    transform:rotate(1.2deg);
+  }
+  .poster__img{width:100%;height:100%;object-fit:cover;display:block}
+  .poster__tape{position:absolute;top:-14px;left:50%;transform:translateX(-50%) rotate(-3deg);
+    width:120px;height:30px;background:rgba(227,167,44,.28);
+    border:1px dashed rgba(227,167,44,.5);backdrop-filter:blur(1px)}
+
+  /* ---------------- COUNTDOWN ---------------- */
+  .count{position:relative;z-index:2;border-block:1px solid var(--line);
+    background:linear-gradient(180deg,#0E0B07,#0C0A07);padding:clamp(30px,6vw,48px) 0}
+  .count__head{display:flex;align-items:center;justify-content:space-between;
+    flex-wrap:wrap;gap:12px;margin-bottom:22px}
+  .count__title{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+    letter-spacing:.14em;font-size:clamp(15px,4vw,18px);color:var(--cream)}
+  .count__title span{color:var(--rojo)}
+  .clock{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(8px,2.4vw,16px)}
+  .cell{position:relative;text-align:center;padding:clamp(14px,3.4vw,22px) 6px;
+    border:1px solid var(--line);background:var(--soot)}
+  .cell .num{font-family:var(--font-display);
+    font-size:clamp(2rem,11vw,3.6rem);line-height:1;color:var(--gold);
+    font-variant-numeric:tabular-nums;letter-spacing:.01em}
+  .cell .lab{margin-top:8px;font-family:var(--font-cond);font-weight:600;
+    text-transform:uppercase;letter-spacing:.12em;font-size:11px;color:var(--tan)}
+  .clock--done{grid-column:1/-1;text-align:center;font-family:var(--font-display);
+    text-transform:uppercase;font-size:clamp(1.5rem,7vw,2.4rem);color:var(--gold)}
+
+  /* ---------------- INFO (ticket stub) ---------------- */
+  .info{position:relative;z-index:2;padding:clamp(44px,8vw,72px) 0}
+  .info__head{max-width:40ch;margin-bottom:clamp(26px,5vw,40px)}
+  .info__head h2{font-family:var(--font-display);text-transform:uppercase;
+    font-size:clamp(2rem,8vw,3.2rem);line-height:.95;margin-top:14px;text-wrap:balance}
+  .ticket{position:relative;background:var(--soot);border:1px solid var(--line-strong)}
+  .ticket__row{display:grid;grid-template-columns:44px 1fr;gap:16px;
+    align-items:start;padding:clamp(18px,4vw,26px) clamp(18px,4vw,30px)}
+  .ticket__row + .ticket__row{border-top:1px dashed var(--line)}
+  .ticket__ico{width:44px;height:44px;display:grid;place-items:center;
+    border:1px solid var(--gold);color:var(--gold)}
+  .ticket__ico svg{width:22px;height:22px}
+  .ticket__row h3{font-family:var(--font-cond);font-weight:700;text-transform:uppercase;
+    letter-spacing:.08em;font-size:14px;color:var(--tan);margin-bottom:4px}
+  .ticket__row p{font-size:clamp(15px,4vw,17px);color:var(--cream);font-weight:500}
+  .ticket__row small{color:var(--tan)}
+
+  /* ---------------- URGENCIA ---------------- */
+  .urgency{position:relative;z-index:2;overflow:hidden;
+    background:linear-gradient(120deg,#2A0B08 0%,#1A0906 60%,#0C0A07 100%);
+    border-top:1px solid var(--line)}
+  .urgency__inner{padding:clamp(40px,8vw,68px) 0;display:grid;gap:24px;
+    justify-items:start}
+  .urgency h2{font-family:var(--font-display);text-transform:uppercase;
+    font-size:clamp(2.1rem,9vw,4rem);line-height:.92;max-width:16ch;text-wrap:balance}
+  .urgency h2 em{font-style:normal;color:var(--rojo-hot)}
+  .urgency p{font-family:var(--font-cond);font-weight:500;text-transform:uppercase;
+    letter-spacing:.04em;color:var(--tan);font-size:clamp(15px,4vw,18px);max-width:30ch}
+
+  /* ---------------- FOOTER ---------------- */
+  footer{position:relative;z-index:2;border-top:1px solid var(--line);
+    padding:clamp(36px,6vw,52px) 0 calc(120px + env(safe-area-inset-bottom))}
+  .foot__grid{display:grid;gap:22px}
+  .foot__brand{font-family:var(--font-display);text-transform:uppercase;
+    font-size:clamp(1.6rem,7vw,2.2rem);color:var(--cream);letter-spacing:.01em}
+  .foot__meta{font-family:var(--font-cond);font-weight:500;text-transform:uppercase;
+    letter-spacing:.06em;font-size:13px;color:var(--tan);line-height:1.9}
+  .foot__meta a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .2s}
+  .foot__meta a:hover{border-color:var(--gold)}
+  .foot__legal{margin-top:20px;font-size:11px;color:#7C7259;letter-spacing:.04em}
+
+  /* ---------------- STICKY MÓVIL ---------------- */
+  .sticky{position:fixed;left:0;right:0;bottom:0;z-index:var(--z-sticky);
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:linear-gradient(180deg,rgba(12,10,7,0),rgba(12,10,7,.94) 34%,var(--night));
+    display:block;transition:transform .32s cubic-bezier(.22,1,.36,1)}
+  /* Se oculta mientras el CTA del hero está a la vista (evita botones duplicados) */
+  .sticky.is-hidden{transform:translateY(115%)}
+  .sticky .cta{box-shadow:4px 4px 0 0 rgba(0,0,0,.5)}
+
+  /* ---------------- RESPONSIVE ---------------- */
+  @media(min-width:860px){
+    .hero__grid{grid-template-columns:.92fr 1.08fr}
+    .hero{padding-top:34px}
+    .ticket__row{grid-template-columns:48px 1fr}
+    .foot__grid{grid-template-columns:1.4fr 1fr;align-items:end}
+    .sticky{display:none}
+    .urgency__inner{grid-template-columns:1.3fr auto;align-items:center}
+  }
+  @media(min-width:560px) and (max-width:859px){
+    .foot__grid{grid-template-columns:1fr 1fr}
+  }
+
+  /* Entrada (mejora un estado ya visible; no oculta contenido) */
+  @keyframes riseIn{from{opacity:.001;transform:translateY(18px)}to{opacity:1;transform:none}}
+  @media(prefers-reduced-motion:no-preference){
+    .anim{animation:riseIn .7s cubic-bezier(.16,1,.3,1) both}
+    .anim-2{animation-delay:.09s}
+    .anim-3{animation-delay:.18s}
+    .anim-4{animation-delay:.27s}
+    .cell{animation:riseIn .6s cubic-bezier(.16,1,.3,1) both}
+    .cell:nth-child(2){animation-delay:.06s}
+    .cell:nth-child(3){animation-delay:.12s}
+    .cell:nth-child(4){animation-delay:.18s}
+  }
+</style>
+</head>
+<body>
+
+<!-- ======================= HERO ======================= -->
+<header class="hero">
+  <div class="hero__glow"></div>
+  <div class="shell">
+    <div class="topbar">
+      <h1 class="brandmark">Ronkalunga</h1>
+      <span class="presenter">Live Nation presenta</span>
+    </div>
+
+    <div class="hero__grid">
+      <div class="hero__text">
+        <span class="kicker anim">Música latina en vivo</span>
+        <p class="hero__lead anim anim-2">Una noche única en <b>The Fillmore Miami Beach</b>.</p>
+
+        <div class="hero__actions anim anim-3">
+          <a href="#" class="cta cta--block" data-cta="hero" aria-label="Comprar entradas en Ticketmaster">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg>
+            Comprar entradas
+          </a>
+          <span class="cta-note">Entradas desde $97 · Venta oficial en Ticketmaster · Cupos limitados</span>
+        </div>
+      </div>
+
+      <!-- KEY ART: reemplaza el póster oficial -->
+      <div class="poster anim anim-3">
+        <span class="poster__tape" aria-hidden="true"></span>
+        <div class="poster__frame" id="posterFrame">
+          <img class="poster__img" src="poster.jpg"
+               alt="Póster oficial de Ronkalunga: 21 de agosto en The Fillmore Miami Beach, presentado por Live Nation"
+               width="1080" height="1440" />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ======================= COUNTDOWN ======================= -->
+<section class="count" aria-label="Cuenta regresiva para el show">
+  <div class="shell">
+    <div class="count__head">
+      <div class="count__title">Faltan para el show <span>·</span> 21 · 08 · 2026</div>
+      <span class="kicker">Miami Beach, FL</span>
+    </div>
+    <div class="clock" id="clock">
+      <div class="cell"><div class="num" id="cd-days">--</div><div class="lab">Días</div></div>
+      <div class="cell"><div class="num" id="cd-hours">--</div><div class="lab">Horas</div></div>
+      <div class="cell"><div class="num" id="cd-mins">--</div><div class="lab">Min</div></div>
+      <div class="cell"><div class="num" id="cd-secs">--</div><div class="lab">Seg</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= INFO (ticket stub) ======================= -->
+<section class="info">
+  <div class="shell">
+    <div class="info__head">
+      <span class="kicker">El evento</span>
+      <h2>Toda la info para tu noche</h2>
+    </div>
+    <div class="ticket">
+      <div class="ticket__row">
+        <span class="ticket__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13"/><circle cx="12" cy="9" r="2.5"/></svg>
+        </span>
+        <div><h3>Lugar</h3><p>The Fillmore Miami Beach <small>(The Jackie Gleason Theater)</small></p><p><small>1700 Washington Avenue, Miami Beach, FL 33139</small></p></div>
+      </div>
+      <div class="ticket__row">
+        <span class="ticket__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4.5" width="18" height="17" rx="1"/><path d="M3 9h18M8 2.5v4M16 2.5v4"/></svg>
+        </span>
+        <div><h3>Fecha y hora</h3><p>Viernes 21 de agosto de 2026 · 8:00 PM <small>(hora de Miami, ET)</small></p></div>
+      </div>
+      <div class="ticket__row">
+        <span class="ticket__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 8V6a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v2a2 2 0 0 0 0 4v2a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-2a2 2 0 0 0 0-4Z"/><path d="M13 5v14"/></svg>
+        </span>
+        <div><h3>Entradas</h3><p>Entradas <span style="color:var(--gold);font-weight:700;font-family:var(--font-cond)">desde $97</span> · venta oficial y segura en Ticketmaster.</p><p><small>Las mejores ubicaciones se agotan primero.</small></p></div>
+      </div>
+      <div class="ticket__row">
+        <span class="ticket__ico" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </span>
+        <div><h3>El show</h3><p>Ronkalunga en concierto, presentado por Live Nation.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= URGENCIA ======================= -->
+<section class="urgency">
+  <div class="shell urgency__inner">
+    <div>
+      <h2>No te quedes <em>afuera</em></h2>
+      <p style="margin-top:14px">Asegura tu lugar antes de que se agoten las entradas.</p>
+    </div>
+    <a href="#" class="cta cta--gold" data-cta="urgency" aria-label="Comprar entradas ahora en Ticketmaster">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      Comprar entradas ahora
+    </a>
+  </div>
+</section>
+
+<!-- ======================= FOOTER ======================= -->
+<footer>
+  <div class="shell foot__grid">
+    <div>
+      <div class="foot__brand">Ronkalunga · Miami Beach</div>
+      <p class="foot__legal">Evento presentado por Live Nation en The Fillmore Miami Beach (The Jackie Gleason Theater).</p>
+    </div>
+    <div class="foot__meta">
+      21 de agosto de 2026<br>
+      1700 Washington Ave, Miami Beach, FL 33139<br>
+      Venta segura en Ticketmaster<br>
+      <a href="https://ronkalunga.com/" target="_blank" rel="noopener">ronkalunga.com</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky móvil -->
+<div class="sticky">
+  <a href="#" class="cta cta--block" data-cta="sticky" aria-label="Comprar entradas en Ticketmaster">
+    Comprar entradas · desde $97
+  </a>
+</div>
+
+<!-- =================================================================
+     CONFIGURACIÓN + TRACKING (todo en memoria, sin localStorage)
+     ================================================================= -->
+<script>
+(function () {
+  "use strict";
+
+  /* ------------------ CONFIG (edita aquí) ------------------ */
+  var CONFIG = {
+    ticketmasterUrl: "https://www.ticketmaster.com/ronkalunga-miami-beach-florida-08-21-2026/event/0D0064C4DAF0491F",
+    pixelId: "1828229565008554",
+    eventDateTime: "2026-08-21T20:00:00-04:00", // 8:00 PM ET (EDT = UTC-4)
+    contentId:   "ronkalunga-fillmore-2026-08-21",
+    contentName: "Ronkalunga — The Fillmore Miami Beach",
+    value: 97,          // precio de arranque de la entrada (para optimización por valor en Meta)
+    currency: "USD",
+    utm: {
+      source:   "meta",
+      medium:   "paid_social",
+      campaign: "ronkalunga_fillmore_ago2026",
+      content:  "general"   // por fase: fase1_expectativa / fase2_conversion / fase3_urgencia
+    }
+  };
+
+  /* ------------------ Utilidades ------------------ */
+  function makeEventId() {
+    if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+    return "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g, function (c) {
+      var r = (Math.random() * 16) | 0, v = c === "x" ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
+  }
+  function buildTicketUrl() {
+    var base = CONFIG.ticketmasterUrl;
+    var params = [
+      "utm_source="   + encodeURIComponent(CONFIG.utm.source),
+      "utm_medium="   + encodeURIComponent(CONFIG.utm.medium),
+      "utm_campaign=" + encodeURIComponent(CONFIG.utm.campaign),
+      "utm_content="  + encodeURIComponent(CONFIG.utm.content)
+    ].join("&");
+    return base + (base.indexOf("?") === -1 ? "?" : "&") + params;
+  }
+  var TICKET_URL = buildTicketUrl();
+
+  /* ------------------ Meta Pixel ------------------ */
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+  fbq('init', CONFIG.pixelId);
+
+  var viewContentEventId = makeEventId();
+  fbq('track', 'ViewContent', {
+    content_type: 'product',
+    content_ids:  [CONFIG.contentId],
+    content_name: CONFIG.contentName,
+    value:        CONFIG.value,
+    currency:     CONFIG.currency
+  }, { eventID: viewContentEventId });
+  // sendServerEvent('ViewContent', viewContentEventId, {...});  // opcional (CAPI)
+
+  /* ------------------ Conversions API (estructura lista) ------------------
+     Cada evento del Pixel lleva un eventID (UUID). Tu backend enviará el MISMO
+     eventID a la Graph API de Meta para deduplicar navegador <-> servidor.
+     No pongas el token de CAPI ni PII sin hashear en el cliente.
+
+  function sendServerEvent(eventName, eventId, custom) {
+    // navigator.sendBeacon('/api/capi', JSON.stringify({
+    //   event_name: eventName, event_id: eventId,
+    //   event_time: Math.floor(Date.now()/1000),
+    //   action_source: 'website', event_source_url: location.href,
+    //   custom_data: custom
+    // }));  // el servidor añade fbp/fbc, IP, user_agent y user_data hasheado
+  }
+  --------------------------------------------------------------------------- */
+
+  /* ------------------ InitiateCheckout + redirect ------------------ */
+  function handleBuyClick(e) {
+    e.preventDefault();
+    var checkoutEventId = makeEventId();
+    fbq('track', 'InitiateCheckout', {
+      content_type: 'product',
+      content_ids:  [CONFIG.contentId],
+      content_name: CONFIG.contentName,
+      value:        CONFIG.value,
+      currency:     CONFIG.currency,
+      num_items:    1
+    }, { eventID: checkoutEventId });
+    // sendServerEvent('InitiateCheckout', checkoutEventId, {...});  // opcional
+
+    var done = false;
+    var redirect = function () { if (!done) { done = true; window.location.href = TICKET_URL; } };
+    setTimeout(redirect, 300);
+    window.setTimeout(redirect, 1200); // salvaguarda
+  }
+
+  var buttons = document.querySelectorAll('[data-cta]');
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].setAttribute('href', TICKET_URL);
+    buttons[i].setAttribute('rel', 'noopener');
+    buttons[i].addEventListener('click', handleBuyClick);
+  }
+
+  /* ------------------ Sticky: aparece al salir el CTA del hero ------------------ */
+  (function () {
+    var heroCta = document.querySelector('.hero__actions');
+    var sticky  = document.querySelector('.sticky');
+    if (!heroCta || !sticky) return;
+    if (!('IntersectionObserver' in window)) return; // sin soporte: sticky siempre visible
+    sticky.classList.add('is-hidden');
+    new IntersectionObserver(function (entries) {
+      sticky.classList.toggle('is-hidden', entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(heroCta);
+  })();
+
+  /* ------------------ Countdown ------------------ */
+  var target = new Date(CONFIG.eventDateTime).getTime();
+  var el = {
+    days:  document.getElementById('cd-days'),
+    hours: document.getElementById('cd-hours'),
+    mins:  document.getElementById('cd-mins'),
+    secs:  document.getElementById('cd-secs'),
+    clock: document.getElementById('clock')
+  };
+  function pad(n){ return (n < 10 ? '0' : '') + n; }
+  function tick() {
+    var diff = target - new Date().getTime();
+    if (diff <= 0) {
+      el.clock.innerHTML = '<div class="clock--done">¡Hoy es el show! Nos vemos en The Fillmore</div>';
+      clearInterval(timer);
+      return;
+    }
+    var d = Math.floor(diff / 86400000);
+    var h = Math.floor((diff % 86400000) / 3600000);
+    var m = Math.floor((diff % 3600000) / 60000);
+    var s = Math.floor((diff % 60000) / 1000);
+    el.days.textContent  = d;
+    el.hours.textContent = pad(h);
+    el.mins.textContent  = pad(m);
+    el.secs.textContent  = pad(s);
+  }
+  tick();
+  var timer = setInterval(tick, 1000);
+})();
+</script>
+
+<noscript>
+  <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1828229565008554&ev=PageView&noscript=1" alt="" />
+</noscript>
+
+</body>
+</html>
